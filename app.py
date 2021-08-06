@@ -8,7 +8,7 @@ CORS(app)
 api = Api(app)
 
 @app.route("/")
-def serve(path):
+def serve():
     return send_from_directory(app.static_folder, 'index.html')
 
 api.add_resource(LandingAPIHandler, '/landing')
