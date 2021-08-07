@@ -15,4 +15,4 @@ def serve():
 
 api.add_resource(LandingAPIHandler, '/landing')
 api.add_resource(RegisterAPIHandler, '/registerUser')
-api.add_resource(LoginAPIHandler, '/registerUser')
+api.add_resource(LoginAPIHandler, '/loginUser')
