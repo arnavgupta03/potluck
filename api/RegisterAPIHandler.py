@@ -31,7 +31,8 @@ class RegisterAPIHandler(Resource):
                 'username': args['username'],
                 'password': args['password'],
                 'bio': "",
-                'profilepic': ""
+                'profilepic': "",
+                'recipes': []
             })
             with open(os.path.join(here, "data.json"), 'w') as file:
                 json.dump(data,file)
