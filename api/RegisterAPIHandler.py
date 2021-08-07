@@ -12,6 +12,8 @@ class RegisterAPIHandler(Resource):
         parser = reqparse.RequestParser()
         parser.add_argument('username', type=str)
         parser.add_argument('password', type=str)
+        parser.add_argument('name', type=str)
+        parser.add_argument('bio', type=str)
 
         args = parser.parse_args()
 
@@ -30,7 +32,8 @@ class RegisterAPIHandler(Resource):
             data['accounts'].append({
                 'username': args['username'],
                 'password': args['password'],
-                'bio': "",
+                'name': args['name'],
+                'bio': args['bio'],
                 'profilepic': "",
                 'recipes': []
             })

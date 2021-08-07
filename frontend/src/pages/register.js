@@ -63,6 +63,18 @@ function Register() {
                     <input type="password" name="password" id="password" placeholder="Enter password" className="m-2" /> <br />
                     <small id="passwordTip" className="form-text text-muted m-2">Make sure it's something unique.</small>
                 </div>
+                <div className="form-group">
+                    <label for="name" className="mx-2">Name</label><br />
+                    <input type="text" name="name" id="name" placeholder="Enter name" className="m-2" />
+                </div>
+                <div className="form-group">
+                    <label for="bio" className="mx-2">Bio</label><br />
+                    <input type="text" name="bio" id="bio" placeholder="Enter a simple bio" className="m-2" />
+                </div>
+                {/*<div className="form-group">
+                    <label for="file" className="mx-2">Profile Photo</label><br />
+                    <input type="file" name="profilepic" accept="image/*" id="profilepic" className="m-2" />
+                </div>*/}
                 <button onClick={doTheRegister} type="submit" className="btn btn-primary m-2">Submit</button>
             </form>
             <iframe name="dummyframe" id="dummyframe" style={{visibility: 'hidden'}}></iframe>
