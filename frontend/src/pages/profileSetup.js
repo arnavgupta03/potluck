@@ -30,6 +30,7 @@ function ProfileSetup() {
             if (data.message === "Success") {
                 sessionStorage.removeItem("password");
                 sessionStorage.setItem("loggedIn", "true");
+                sessionStorage.setItem("postsDone", "");
                 setLocation("/feed");
             } else {
                 sessionStorage.setItem("loggedIn", "false");
