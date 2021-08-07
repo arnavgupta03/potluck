@@ -32,7 +32,7 @@ function ProfileSetup() {
                 sessionStorage.setItem("loggedIn", "true");
                 setLocation("/feed");
             } else {
-                sessionStorage.setItem("loggedIn", "true");
+                sessionStorage.setItem("loggedIn", "false");
                 setLocation("/")
             }
         });
