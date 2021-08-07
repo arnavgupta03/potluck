@@ -1,4 +1,6 @@
 import '../styles/landing.css'
+import logo from "../logo.png"
+import { Router, Link } from "wouter";
 
 function Home() {
   return (

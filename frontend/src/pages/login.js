@@ -1,6 +1,7 @@
 import React from "react";
 import { Router, Link, useLocation } from "wouter";
 import '../styles/loginRegister.css';
+import logo from "../logo.png"
 
 function Login() {
     const [location, setLocation] = useLocation();
