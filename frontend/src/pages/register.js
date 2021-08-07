@@ -75,7 +75,7 @@ function Register() {
                     <label for="file" className="mx-2">Profile Photo</label><br />
                     <input type="file" name="profilepic" accept="image/*" id="profilepic" className="m-2" />
                 </div>*/}
-                <div classname="text-center">
+                <div className="text-center">
                     <button onClick={doTheRegister} type="submit" className="btn btn-primary m-2 text-center">Submit</button>
                 </div>
             </form>
