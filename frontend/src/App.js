@@ -9,14 +9,22 @@ export default function App() {
   return (
     <Router hook={useHashLocation}>
       <nav className="navbar navbar-light bg-light">
-        <Link
-          className="navbar-brand"
-          href="/"
-        >
-          <img src={logo} className="img-fluid m-2" alt="logo" width="75"/>
-          Potluck
-        </Link>
-        <Link href="/about">About</Link>
+        <div className="navbar-collapse">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link
+                className="navbar-brand"
+                href="/"
+              >
+                <img src={logo} className="img-fluid m-2" alt="logo" width="75"/>
+                Potluck
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/about">About</Link>
+            </li>
+          </ul>
+        </div>
       </nav>
       <main role="main" className="wrapper">
         <div className="content">
