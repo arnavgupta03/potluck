@@ -35,7 +35,7 @@ class Feed extends React.Component {
 
     render() {
         return(
-            <div>
+            <div className="text-center">
                 <PostRecipe imagesrc={this.state.imagesrc} recipename={this.state.recipename} recipeuser={this.state.recipeuser}/>
                 <button>Like</button>
                 <button>Save</button>
