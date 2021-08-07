@@ -4,6 +4,8 @@ from flask_cors import CORS
 from api.LandingAPIHandler import LandingAPIHandler
 from api.RegisterAPIHandler import RegisterAPIHandler
 from api.LoginAPIHandler import LoginAPIHandler
+from api.FeedAPIHandler import FeedAPIHandler
+from api.AddRecipeAPIHandler import AddRecipeAPIHandler
 
 app = Flask(__name__, static_url_path="", static_folder="frontend/build")
 CORS(app)
@@ -16,3 +18,5 @@ def serve():
 api.add_resource(LandingAPIHandler, '/landing')
 api.add_resource(RegisterAPIHandler, '/registerUser')
 api.add_resource(LoginAPIHandler, '/loginUser')
+api.add_resource(FeedAPIHandler, '/getPost')
+api.add_resource(AddRecipeAPIHandler, '/postRecipe')
