@@ -4,6 +4,7 @@ import Home from "../pages/home";
 import About from "../pages/about";
 import Login from "../pages/login";
 import Register from "../pages/register";
+import ProfileSetup from "../pages/profileSetup"
 
 /*
 The router is imported in app.jsx
@@ -18,6 +19,7 @@ export default () => (
       <Route path="/" component={Home} />
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
+      <Route path="/setupProfile" component={ProfileSetup} />
       <Route path="/about" component={About} />
     </Switch>
 );
