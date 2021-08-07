@@ -23,6 +23,12 @@ export default function App() {
             <li className="nav-item">
               <Link href="/about">About</Link>
             </li>
+            <li className="nav-item">
+              <Link href="/register">Register</Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/login">Login</Link>
+            </li>
           </ul>
         </div>
       </nav>
