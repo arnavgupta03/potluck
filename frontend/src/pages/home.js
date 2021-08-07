@@ -1,4 +1,3 @@
-import logo from '../logo.png';
 import '../styles/landing.css'
 
 function Home() {
