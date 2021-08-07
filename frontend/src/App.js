@@ -8,7 +8,7 @@ import useHashLocation from "./hooks/wouter-hash";
 export default function App() {
   return (
     <Router hook={useHashLocation}>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      {/*<nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <Link
             className="navbar-brand"
@@ -31,7 +31,7 @@ export default function App() {
             </ul>
           </div>
         </div>
-      </nav>
+      </nav>*/}
       <main role="main" className="wrapper">
         <div className="content">
           {/* Router specifies which component to insert here as the main content */}
