@@ -8,33 +8,28 @@ import useHashLocation from "./hooks/wouter-hash";
 export default function App() {
   return (
     <Router hook={useHashLocation}>
-      <nav className="navbar navbar-light bg-light">
-          <div className="navbar-collapse">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link
-                className="navbar-brand"
-                href="/"
-              >
-                <img src={logo} className="img-fluid m-2" alt="logo" width="75"/>
-                Potluck
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link href="/about">About</Link>
-            </li>
-            <li className="nav-item">
-              <Link href="/register">Register</Link>
-            </li>
-            <li className="nav-item">
-              <Link href="/login">Login</Link>
-            </li>
-          </ul>
-        </div>
-        <div className="sideNavbar">
-          <a href="/about">About</a>
-          <a href="/register">Register</a>
-          <a href="/login">Login</a>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div className="container-fluid">
+          <Link
+            className="navbar-brand"
+            href="/"
+          >
+            <img src={logo} className="img-fluid m-2" alt="logo" width="36"/>
+            Potluck
+          </Link>
+          <div className="collapse navbar-collapse">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item pt-auto pb-auto pl-2">
+                <Link href="/about" className="nav-link active pt-auto pb-auto pl-2">About</Link>
+              </li>
+              <li className="nav-item pt-auto pb-auto pl-2">
+                <Link href="/register" className="nav-link active pt-auto pb-auto pl-2">Register</Link>
+              </li>
+              <li className="nav-item pt-auto pb-auto pl-2">
+                <Link href="/login" className="nav-link active pt-auto pb-auto pl-2">Login</Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
       <main role="main" className="wrapper">

@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.sideNavbar {
+/*.sideNavbar {
   height: 100%;
   width: 15%;
   position:relative;
@@ -22,7 +22,7 @@
 
 .sideNavbar a:hover {
   color: black;
-}
+} */
 
 .App-logo {
   height: 40vmin;
