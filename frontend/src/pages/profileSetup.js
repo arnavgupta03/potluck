@@ -40,7 +40,7 @@ function ProfileSetup() {
 
     return(
         <div>
-            This is the profile setup page.
+            Setting up your profile...
         </div>
     );
 }
