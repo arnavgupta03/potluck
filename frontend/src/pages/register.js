@@ -43,24 +43,31 @@ function Register() {
     }*/
 
     //render() {
-        return (
-            <div>
-                <h1 className="display-1 mx-1">Register</h1>
-                <form action="http://localhost:5000/registerUser" method="post" target="dummyframe">
-                    <div className="form-group">
-                        <label for="username" className="mx-2">Username</label><br />
-                        <input type="text" id="username" name="username" placeholder="Enter username" className="m-2" />
-                    </div>
-                    <div className="form-group">
-                        <label for="password" className="mx-2">Password</label><br />
-                        <input type="password" name="password" id="password" placeholder="Enter password" className="m-2" /> <br />
-                        <small id="passwordTip" className="form-text text-muted m-2">Make sure it's something unique.</small>
-                    </div>
-                    <button onClick={() => setLocation("/setupProfile")} type="submit" className="btn btn-primary m-2">Submit</button>
-                </form>
-                <iframe name="dummyframe" id="dummyframe" style={{visibility: 'hidden'}}></iframe>
-            </div>
-        );
+
+    const doTheRegister = () => {
+        sessionStorage.setItem("username", document.getElementById("username").value);
+        sessionStorage.setItem("password", document.getElementById("password").value);
+        setLocation("/setupProfile");
+    }
+
+    return (
+        <div>
+            <h1 className="display-1 mx-1">Register</h1>
+            <form action="http://localhost:5000/registerUser" method="post" target="dummyframe">
+                <div className="form-group">
+                    <label for="username" className="mx-2">Username</label><br />
+                    <input type="text" id="username" name="username" placeholder="Enter username" className="m-2" />
+                </div>
+                <div className="form-group">
+                    <label for="password" className="mx-2">Password</label><br />
+                    <input type="password" name="password" id="password" placeholder="Enter password" className="m-2" /> <br />
+                    <small id="passwordTip" className="form-text text-muted m-2">Make sure it's something unique.</small>
+                </div>
+                <button onClick={doTheRegister} type="submit" className="btn btn-primary m-2">Submit</button>
+            </form>
+            <iframe name="dummyframe" id="dummyframe" style={{visibility: 'hidden'}}></iframe>
+        </div>
+    );
     //}
 }
 
