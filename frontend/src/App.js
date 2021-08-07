@@ -9,7 +9,7 @@ export default function App() {
   return (
     <Router hook={useHashLocation}>
       <nav className="navbar navbar-light bg-light">
-        <div className="navbar-collapse">
+          <div className="navbar-collapse">
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link
@@ -30,6 +30,11 @@ export default function App() {
               <Link href="/login">Login</Link>
             </li>
           </ul>
+        </div>
+        <div className="sideNavbar">
+          <a href="/about">About</a>
+          <a href="/register">Register</a>
+          <a href="/login">Login</a>
         </div>
       </nav>
       <main role="main" className="wrapper">
