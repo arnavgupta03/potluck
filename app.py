@@ -3,6 +3,7 @@ from flask_restful import Api #, Resource, reqparse
 from flask_cors import CORS
 from api.LandingAPIHandler import LandingAPIHandler
 from api.RegisterAPIHandler import RegisterAPIHandler
+from api.LoginAPIHandler import LoginAPIHandler
 
 app = Flask(__name__, static_url_path="", static_folder="frontend/build")
 CORS(app)
@@ -14,3 +15,4 @@ def serve():
 
 api.add_resource(LandingAPIHandler, '/landing')
 api.add_resource(RegisterAPIHandler, '/registerUser')
+api.add_resource(LoginAPIHandler, '/registerUser')
