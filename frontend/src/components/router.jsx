@@ -5,6 +5,7 @@ import About from "../pages/about";
 import Login from "../pages/login";
 import Register from "../pages/register";
 import ProfileSetup from "../pages/profileSetup"
+import Feed from "../pages/feed"
 
 /*
 The router is imported in app.jsx
@@ -20,6 +21,7 @@ export default () => (
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
       <Route path="/setupProfile" component={ProfileSetup} />
+      <Route path="/feed" component={Feed} />
       <Route path="/about" component={About} />
     </Switch>
 );
