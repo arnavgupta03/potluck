@@ -33,6 +33,8 @@ class AddRecipeAPIHandler(Resource):
                         'picture': args['recipeimage'],
                         'steps': args['recipesteps'].split(',')
                     })
+                    with open(os.path.join(here, "data.json"), 'w') as file:
+                        json.dump(data,file)
                     return {
                         'message': "Success"
                     }
