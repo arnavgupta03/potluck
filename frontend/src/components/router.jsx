@@ -7,6 +7,7 @@ import Register from "../pages/register";
 import ProfileSetup from "../pages/profileSetup"
 import Feed from "../pages/feed"
 import AddRecipe from "../pages/addRecipe"
+import ViewRecipe from "../pages/viewRecipe";
 
 /*
 The router is imported in app.jsx
@@ -24,6 +25,7 @@ export default () => (
       <Route path="/setupProfile" component={ProfileSetup} />
       <Route path="/addRecipe" component={AddRecipe} />
       <Route path="/feed" component={Feed} />
+      <Route path="/viewRecipe" component={ViewRecipe} />
       <Route path="/about" component={About} />
     </Switch>
 );
