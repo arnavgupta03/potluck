@@ -3,8 +3,57 @@
         {
             "username": "test",
             "password": "person",
+            "name": "test person",
             "bio": "test-bio",
-            "profilepic": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png"
+            "profilepic": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png",
+            "recipes": [
+                {
+                    "name": "nachos",
+                    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Nachos-cheese.jpg/1200px-Nachos-cheese.jpg",
+                    "steps": [
+                        "Start making food.",
+                        "Keep making food.",
+                        "Profit."
+                    ]
+                },
+                {
+                    "name": "pizza",
+                    "picture": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg",
+                    "steps": [
+                        "Start making food.",
+                        "Keep making food.",
+                        "Profit."
+                    ]
+                },
+                {
+                    "name": "butter chicken",
+                    "picture": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Butter_Chicken_0000x0000_0.jpg",
+                    "steps": [
+                        "Start making food.",
+                        "Keep making food.",
+                        "Profit."
+                    ]
+                }
+            ]
+        },
+        {
+            "username": "arnav",
+            "password": "gupta",
+            "name": "arnav",
+            "bio": "hi",
+            "profilepic": "",
+            "recipes": [
+                {
+                    "name": "pasta",
+                    "picture": "https://res.cloudinary.com/guptap1/image/upload/v1628384516/potluck/gg245kw8xbqp5ew3agfr.png",
+                    "steps": [
+                        "add pasta",
+                        "add sauce",
+                        "heat it up",
+                        "bam! pasta"
+                    ]
+                }
+            ]
         }
     ]
 }
