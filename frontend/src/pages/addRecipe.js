@@ -65,7 +65,7 @@ function AddRecipe() {
                 <input type="text" id="recipename" name="recipename" placeholder="What'd you make?" className="m-2" />
             </div>
             <div className="form-group text-center">
-                <label for="recipesteps" className="mx-2">Steps</label><br />
+                <label for="recipesteps" className="mx-2">Steps (no commas)</label><br />
                 {[...Array(count)].map((value, index) => (<div><input type="text" id={"recipesteps" + index} name="recipesteps" placeholder="How'd you make it?" className="m-2" /><br /></div>))}
             </div>
             <div className="text-center">
