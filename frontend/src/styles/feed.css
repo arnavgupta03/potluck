@@ -1,0 +1,11 @@
+.postRecipeName {
+    text-align: left;
+    width: 49%;
+    display: inline-block;
+}
+
+.postRecipeUser {
+    text-align: right;
+    width: 49%;
+    display: inline-block;
+}
