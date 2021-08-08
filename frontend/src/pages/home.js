@@ -32,7 +32,7 @@ function Home() {
           </div>
         </nav>
         <div className="imgDiv">
-          <img src={home} className="homeimg" alt="'Potluck Cooking' by The Tedster is licensed with CC BY-SA 2.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/2.0/"></img>
+          <img src={home} className="homeimg" title="'Potluck Cooking' by The Tedster is licensed with CC BY-SA 2.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/2.0/" alt="'Potluck Cooking' by The Tedster is licensed with CC BY-SA 2.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/2.0/"></img>
         </div>
         <h2 className="text-center desc">Potluck. The social media app for food.</h2>
       </div>
