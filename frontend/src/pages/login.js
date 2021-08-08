@@ -13,7 +13,7 @@ function Login() {
     }
 
     return (
-        <div className="register">
+        <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container-fluid">
                     <Link
@@ -38,19 +38,23 @@ function Login() {
                     </div>
                 </div>
             </nav>
-            <h1 className="display-1 mx-1 text-center">Log In</h1>
-            <form id="form">{/* action="http://localhost:5000/loginUser" method="post" target="dummyframe">*/}
-                <div className="form-group text-center">
-                    <label for="username" className="mx-2">Username</label><br />
-                    <input type="text" id="username" name="username" placeholder="Enter username" className="m-2" />
+            <div className="w-100 text-center ml-auto mr-auto d-flex justify-content-center pt-5 align-items-center">
+                <div className="register shadow">
+                    <h1 className="display-1 mx-1 text-center pb-2">Log In</h1>
+                    <form id="form">{/* action="http://localhost:5000/loginUser" method="post" target="dummyframe">*/}
+                        <div className="form-group text-center pb-3">
+                            <label for="username" className="mx-2 form-label">Username</label><br />
+                            <input type="text" id="username" name="username" placeholder="Enter username" className="m-auto pl-3 form-control w-75" />
+                        </div>
+                        <div className="form-group text-center">
+                            <label for="password" className="mx-2 form-label w-75">Password</label><br />
+                            <input type="password" name="password" id="password" placeholder="Enter password" className="m-auto pl-3 form-control w-75" />
+                        </div>
+                    </form>
+                    <div className="text-center">
+                        <button onClick={doTheRegister} className="btn btn-primary m-2">Submit</button>
+                    </div>
                 </div>
-                <div className="form-group text-center">
-                    <label for="password" className="mx-2">Password</label><br />
-                    <input type="password" name="password" id="password" placeholder="Enter password" className="m-2" />
-                </div>
-            </form>
-            <div className="text-center">
-                <button onClick={doTheRegister} className="btn btn-primary m-2">Submit</button>
             </div>
             <iframe name="dummyframe" id="dummyframe" style={{visibility: 'hidden'}}></iframe>
         </div>

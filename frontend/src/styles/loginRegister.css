@@ -1,4 +1,6 @@
 .register {
-    background-color: lightgray;
-    border-bottom: 8rem;
+    background-color: beige;
+    border-radius: 2rem;
+    width: 32rem;
+    text-align: center;
 }
