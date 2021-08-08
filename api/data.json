@@ -1,56 +1,199 @@
 {
     "accounts": [
         {
-            "username": "test",
-            "password": "person",
-            "name": "test person",
-            "bio": "test-bio",
-            "profilepic": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png",
+            "username": "arnav",
+            "password": "gupta",
+            "name": "Arnav Gupta",
+            "bio": "I'm an amateur cook with a few recipes.",
+            "profilepic": "",
             "recipes": [
                 {
-                    "name": "nachos",
-                    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Nachos-cheese.jpg/1200px-Nachos-cheese.jpg",
+                    "name": "Apple Pie",
+                    "picture": "https://res.cloudinary.com/guptap1/image/upload/v1628395580/potluck/n7hahqsz0odzn9xusp1e.jpg",
                     "steps": [
-                        "Start making food.",
-                        "Keep making food.",
-                        "Profit."
+                        "Cut some apples.",
+                        "Make some dough.",
+                        "Freeze the dough.",
+                        "Mix the apples with sugar.",
+                        "Put the dough in a tray.",
+                        "Put the apple-sugar mixture in the dough.",
+                        "Bake it.",
+                        "Eat."
                     ]
                 },
                 {
-                    "name": "pizza",
-                    "picture": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg",
+                    "name": "Hot Dog",
+                    "picture": "https://res.cloudinary.com/guptap1/image/upload/v1628395694/potluck/vvjpj7o251qin3pbchyc.jpg",
                     "steps": [
-                        "Start making food.",
-                        "Keep making food.",
-                        "Profit."
-                    ]
-                },
-                {
-                    "name": "butter chicken",
-                    "picture": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Butter_Chicken_0000x0000_0.jpg",
-                    "steps": [
-                        "Start making food.",
-                        "Keep making food.",
-                        "Profit."
+                        "Boil the sausage.",
+                        "Heat up the bun.",
+                        "Put the sausage in the bun.",
+                        "Add condiments."
                     ]
                 }
             ]
         },
         {
-            "username": "arnav",
-            "password": "gupta",
-            "name": "arnav",
-            "bio": "hi",
+            "username": "bob",
+            "password": "mcandy",
+            "name": "Bob McAndy",
+            "bio": "I'm an absolute chef!",
             "profilepic": "",
             "recipes": [
                 {
-                    "name": "pasta",
-                    "picture": "https://res.cloudinary.com/guptap1/image/upload/v1628384516/potluck/gg245kw8xbqp5ew3agfr.png",
+                    "name": "Brownies",
+                    "picture": "https://res.cloudinary.com/guptap1/image/upload/v1628400624/potluck/xqycckdqhbs84a9fnuul.webp",
                     "steps": [
-                        "add pasta",
-                        "add sauce",
-                        "heat it up",
-                        "bam! pasta"
+                        "Add cocoa powder and baking soda to flour.",
+                        "Add water",
+                        " eggs",
+                        " and butter.",
+                        "Pour into a pan.",
+                        "Bake in an oven.",
+                        "Let cool and serve."
+                    ]
+                },
+                {
+                    "name": "Oatmeal",
+                    "picture": "https://res.cloudinary.com/guptap1/image/upload/v1628400800/potluck/en1l0u6fwcehyvber5js.jpg",
+                    "steps": [
+                        "Add quick oats to a bowl.",
+                        "Add milk to the bowl.",
+                        "Heat up for 2 minutes in a microwave.",
+                        "Stir to cool down.",
+                        "Heat up for 1.5 more minutes in a microwave.",
+                        "Let cool and serve."
+                    ]
+                },
+                {
+                    "name": "Corn Dogs",
+                    "picture": "https://res.cloudinary.com/guptap1/image/upload/v1628400922/potluck/ramerpw5rs27x0yhmimx.jpg",
+                    "steps": [
+                        "Put a hot dog on a popsicle stick.",
+                        "Coat in a corn-based batter.",
+                        "Fry for 2 minutes.",
+                        "Remove from oil.",
+                        "Let cool and serve."
+                    ]
+                },
+                {
+                    "name": "Muffins",
+                    "picture": "https://res.cloudinary.com/guptap1/image/upload/v1628401098/potluck/mokii2f4vfyr4tmwkvmc.jpg",
+                    "steps": [
+                        "Add water and butter to flour.",
+                        "Add eggs and baking soda.",
+                        "Add muffin cups to muffin tray.",
+                        "Pour batter into muffin cups.",
+                        "Bake in oven.",
+                        "Let cool and serve."
+                    ]
+                }
+            ]
+        },
+        {
+            "username": "ramsay",
+            "password": "gordon",
+            "name": "Ramsay Gordon",
+            "bio": "I have more Michelin stars than there are stars in the universe.",
+            "profilepic": "",
+            "recipes": [
+                {
+                    "name": "Pasta",
+                    "picture": "https://res.cloudinary.com/guptap1/image/upload/v1628398698/potluck/hbkaoppcgz14bwhnrnzn.jpg",
+                    "steps": [
+                        "Boil your preferred pasta.",
+                        "Add pasta sauce.",
+                        "Add any vegetables you want.",
+                        "Put it all together in a pan.",
+                        "Bake the pan.",
+                        "Let it cool and eat."
+                    ]
+                },
+                {
+                    "name": "Sushi",
+                    "picture": "https://res.cloudinary.com/guptap1/image/upload/v1628398973/potluck/oqdbb2qx4ig0bk7bexr3.png",
+                    "steps": [
+                        "Boil the sushi rice.",
+                        "Put the rice on the seaweed sheets.",
+                        "Put whatever toppings you want on one end of the sheet.",
+                        "Roll the sheet.",
+                        "Cut and serve."
+                    ]
+                },
+                {
+                    "name": "Ramen",
+                    "picture": "https://res.cloudinary.com/guptap1/image/upload/v1628399121/potluck/hn8t3nqew1e4uygx4q54.webp",
+                    "steps": [
+                        "Boil noodles.",
+                        "Add eggs and meat.",
+                        "Add vegetables.",
+                        "Add any spices.",
+                        "Continue boiling.",
+                        "Plate and serve."
+                    ]
+                },
+                {
+                    "name": "Donuts",
+                    "picture": "https://res.cloudinary.com/guptap1/image/upload/v1628399548/potluck/rgpubgivti2lgkbxaohn.jpg",
+                    "steps": [
+                        "Make some dough.",
+                        "Shape the dough into donuts.",
+                        "Fry the donuts.",
+                        "Take them out of oil.",
+                        "Cover with powdered sugar."
+                    ]
+                }
+            ]
+        },
+        {
+            "username": "leung",
+            "password": "alvin",
+            "name": "Leung Alvin",
+            "bio": "I know food.",
+            "profilepic": "",
+            "recipes": [
+                {
+                    "name": "Pancakes",
+                    "picture": "https://res.cloudinary.com/guptap1/image/upload/v1628399830/potluck/petdmxkjjynmlxqlz5jq.jpg",
+                    "steps": [
+                        "Add water to a pancake mix.",
+                        "Pour the batter onto a pan.",
+                        "Flip the pancake.",
+                        "Remove from pan and serve."
+                    ]
+                },
+                {
+                    "name": "Waffles",
+                    "picture": "https://res.cloudinary.com/guptap1/image/upload/v1628399964/potluck/fl8kz29btgjkkiffkz5l.jpg",
+                    "steps": [
+                        "Make a waffle batter with pancake mix and water.",
+                        "Pour the batter into a waffle iron.",
+                        "Take the waffle out once cooked.",
+                        "Serve with any toppings."
+                    ]
+                },
+                {
+                    "name": "Cookies",
+                    "picture": "https://res.cloudinary.com/guptap1/image/upload/v1628400225/potluck/dulcf5etba2ov4cb0ubr.jpg",
+                    "steps": [
+                        "Add flour to water and butter.",
+                        "Add baking soda.",
+                        "Add any toppings such as chocolate chips.",
+                        "Place globs onto a baking sheet.",
+                        "Bake.",
+                        "Let them cool and serve."
+                    ]
+                },
+                {
+                    "name": "Cake",
+                    "picture": "https://res.cloudinary.com/guptap1/image/upload/v1628400378/potluck/zdseiwm5nmbpkmgqedkf.jpg",
+                    "steps": [
+                        "Add flour to water and butter.",
+                        "Add eggs and baking soda.",
+                        "Place into a pan.",
+                        "Bake in an oven.",
+                        "Let cool and add any toppings.",
+                        "Cut and serve."
                     ]
                 }
             ]
