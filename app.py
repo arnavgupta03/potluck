@@ -8,6 +8,7 @@ from api.FeedAPIHandler import FeedAPIHandler
 from api.AddRecipeAPIHandler import AddRecipeAPIHandler
 from api.GetRecipeAPIHandler import GetRecipeAPIHandler
 from api.GetProfileAPIHandler import GetProfileAPIHandler
+from api.BookmarksAPIHandler import BookmarksAPIHandler
 
 app = Flask(__name__, static_url_path="", static_folder="frontend/build")
 CORS(app)
@@ -24,3 +25,4 @@ api.add_resource(FeedAPIHandler, '/getPost')
 api.add_resource(AddRecipeAPIHandler, '/postRecipe')
 api.add_resource(GetRecipeAPIHandler, '/getRecipe')
 api.add_resource(GetProfileAPIHandler, '/getProfile')
+api.add_resource(BookmarksAPIHandler, '/getBookmarks')
