@@ -32,7 +32,13 @@
                     ]
                 }
             ],
-            "bookmarks": []
+            "bookmarks": [
+                {
+                    "recipename": "Oatmeal",
+                    "recipeimage": "https://res.cloudinary.com/guptap1/image/upload/v1628400800/potluck/en1l0u6fwcehyvber5js.jpg",
+                    "recipeuser": "bob"
+                }
+            ]
         },
         {
             "username": "bob",
