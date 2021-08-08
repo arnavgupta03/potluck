@@ -1,6 +1,8 @@
 import React from "react"
 import '../styles/feed.css';
 import PostRecipe from "./postRecipe";
+import logo from "../logo.png"
+import { Router, Link } from "wouter";
 
 class Feed extends React.Component {
     constructor(props) {
