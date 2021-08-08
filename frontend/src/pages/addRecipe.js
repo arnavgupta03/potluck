@@ -1,32 +1,62 @@
 import React, { useState } from "react"
-
-/*cloudinary.config({ 
-    cloud_name: 'guptap1', 
-    api_key: '695351193913259', 
-    api_secret: 'sjzBCiI7JQidzt-HUrwCpIBCtGc' 
-});*/
+import { Router, Link, useLocation } from "wouter";
 
 function AddRecipe() {
     const [count, setCount] = useState(1);
+    const [location, setLocation] = useLocation();
 
     function doTheAdd() {
         const recipename = document.getElementById("recipename").value;
-        const recipesteps = []
-        const recipeimage = document.getElementById("profilepic").files[0];
+        var recipesteps = []
+        const recipeimage = sessionStorage.getItem("recipeimage");
+        const username = sessionStorage.getItem("username");
 
         for (var i = 0; i < count; i++) {
             recipesteps.push(document.getElementById("recipesteps" + i).value);
         }
 
-        
+        recipesteps = recipesteps.join();
+
+        fetch("http://localhost:5000/postRecipe", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({
+                recipename: recipename,
+                recipesteps: recipesteps,
+                recipeimage: recipeimage,
+                username: username
+            })
+        }).then(response => response.json()).then((data) => {
+            if(data.message === "Success") {
+                alert("Successfully posted!");
+                setLocation("/feed");
+            } else if (data.message === "Recipe name already exists") {
+                alert("Recipe name already exists. Please change the name.");
+            } else {
+                alert("Please try again.");
+            }
+        });
+    }
+
+    const checkUploadResult = (resultEvent) => {
+        if (resultEvent.event === "success") {
+            sessionStorage.setItem("recipeimage", resultEvent.info.secure_url);
+        }
     }
 
     const addLine = () => {
         setCount(count + 1);
     }
 
-    let widget = window.cloudinary.createUploadWidget()
+    let widget = window.cloudinary.createUploadWidget({
+        cloudName: "guptap1",
+        uploadPreset: "potluck_post"
+    },(error, result) => { checkUploadResult(result) });
     
+    const showWidget = () => {
+        widget.open()
+    }
+
     return(
         <div>
             <h3 className="display-3 text-center">Add a Recipe</h3>
@@ -44,6 +74,7 @@ function AddRecipe() {
             <div className="form-group text-center">
                 <label for="profilepic" className="mx-2">Recipe Photo</label><br />
                 {/*<input type="file" name="profilepic" accept="image/*" id="profilepic" className="m-2" />*/}
+                <button onClick={showWidget} className="btn btn-primary m-2 text-center">Upload Photo</button>
             </div>
             <div className="text-center">
                 <button onClick={doTheAdd} type="submit" className="btn btn-primary m-2 text-center">Submit</button>
