@@ -35,6 +35,43 @@ class Feed extends React.Component {
         });
     }
 
+    getNextPost() {
+        const donePost = this.state.recipeuser + "_" + this.state.recipename;
+        var newPostsDoneArray = sessionStorage.getItem("postsDone").split(',')
+        if (!(newPostsDoneArray.includes(donePost))){
+            newPostsDoneArray.push(donePost);
+        }
+        const newPostsDone = newPostsDoneArray.join(',');
+        sessionStorage.setItem("postsDone", newPostsDone);
+
+        fetch("http://localhost:5000/getPost", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({
+                username: this.state.user,
+                postsDone: newPostsDone
+            })
+        }).then(response => response.json()).then((data) => {
+            this.setState({
+                imagesrc: data.recipeimage,
+                recipename: data.recipename,
+                recipeuser: data.user
+            });
+        });
+    }
+
+    handleLike() {
+        this.getNextPost();
+    }
+
+    handleNext() {
+        this.getNextPost();
+    }
+
+    handleSave() {
+        this.getNextPost();
+    }
+
     render() {
         return(
             <div className="text-center">
@@ -63,9 +100,9 @@ class Feed extends React.Component {
                     </div>
                 </nav>
                 <PostRecipe imagesrc={this.state.imagesrc} recipename={this.state.recipename} recipeuser={this.state.recipeuser}/>
-                <button>Like</button>
-                <button>Save</button>
-                <button>Next</button>
+                <button onClick={() => this.handleLike()}>Like</button>
+                <button onClick={() => this.handleSave()}>Save</button>
+                <button onClick={() => this.handleNext()}>Next</button>
             </div>
         );
     }
