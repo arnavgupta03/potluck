@@ -60,7 +60,7 @@ class ViewRecipe extends React.Component {
                 </nav>
                 <PostRecipe imagesrc={this.state.imagesrc} recipename={this.state.recipename} recipeuser={this.state.recipeuser}/>
                 <div>
-                    {this.state.recipesteps.split(',').map((value, index) => (<div><p id={"step" + index}>{index + ". " + value}</p></div>))}
+                    {this.state.recipesteps.split(',').map((value, index) => (<div><p id={"step" + index}>{(index + 1) + ". " + value}</p></div>))}
                 </div>
             </div>
         );
