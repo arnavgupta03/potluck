@@ -66,7 +66,20 @@ class Feed extends React.Component {
     }
 
     handleLike() {
-        this.getNextPost();
+        fetch("http://localhost:5000/getBookmarks", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({
+                username: this.state.user,
+                recipename: this.state.recipename,
+                recipeimage: this.state.imagesrc,
+                recipeuser: this.state.recipeuser
+            })
+        }).then(response => response.json()).then(data => {
+            if(data.message == "Success") {
+                this.getNextPost();
+            }
+        });
     }
 
     handleNext() {
@@ -74,7 +87,20 @@ class Feed extends React.Component {
     }
 
     handleSave() {
-        this.getNextPost();
+        fetch("http://localhost:5000/getBookmarks", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({
+                username: this.state.user,
+                recipename: this.state.recipename,
+                recipeimage: this.state.recipeimage,
+                recipeuser: this.state.recipeuser
+            })
+        }).then(response => response.json()).then(data => {
+            if(data.message == "Success") {
+                this.getNextPost();
+            }
+        });
     }
 
     render() {
@@ -101,16 +127,21 @@ class Feed extends React.Component {
                                     <Link href="/addRecipe" className="nav-link active pt-auto pb-auto pl-2">New Recipe</Link>
                                 </li>
                                 <li className="nav-item pt-auto pb-auto pl-2">
+                                    <Link href="/myBookmarks" className="nav-link active pt-auto pb-auto pl-2">My Bookmarks</Link>
+                                </li>
+                                <li className="nav-item pt-auto pb-auto pl-2">
                                     <Link href="/viewMyProfile" className="nav-link active pt-auto pb-auto pl-2">{sessionStorage.getItem("username")}</Link>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </nav>
-                <PostRecipe imagesrc={this.state.imagesrc} recipename={this.state.recipename} recipeuser={this.state.recipeuser}/>
-                <button onClick={() => this.handleLike()}><img src={like} className="m-auto" width="50" height="50"></img></button>
-                <button onClick={() => this.handleSave()}><img src={save} className="m-auto" width="50" height="50"></img></button>
-                <button onClick={() => this.handleNext()}><img src={next} className="m-auto" width="50" height="50"></img></button>
+                <div className="pt-5">
+                    <PostRecipe imagesrc={this.state.imagesrc} recipename={this.state.recipename} recipeuser={this.state.recipeuser}/>
+                    <button onClick={() => this.handleLike()}><img src={like} className="m-auto" width="50" height="50"></img></button>
+                    <button onClick={() => this.handleSave()}><img src={save} className="m-auto" width="50" height="50"></img></button>
+                    <button onClick={() => this.handleNext()}><img src={next} className="m-auto" width="50" height="50"></img></button>
+                </div>
             </div>
         );
     }
