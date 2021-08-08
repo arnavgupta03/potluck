@@ -5,7 +5,7 @@ class ViewProfile extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: sessionStorage.getItem("username"),
+            username: sessionStorage.getItem("currentRecipe").split('_')[0],
             profilename: "",
             bio: "",
             recipes: []
