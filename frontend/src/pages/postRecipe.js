@@ -10,7 +10,7 @@ class PostRecipe extends React.Component {
     render() {
         return (
             <div>
-                <img src={this.props.imagesrc} width='500' height='500'/><br></br>
+                <img src={this.props.imagesrc} width='400' height='400'/><br></br>
                 <div width='1000'>
                     <Link href="/viewRecipe"><h3 className="postRecipeName">{this.props.recipename}</h3></Link>
                     <Link href="/viewProfile" className="postRecipeUser"><small className="muted">{"by " + this.props.recipeuser}</small></Link>
