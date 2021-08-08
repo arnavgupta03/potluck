@@ -1,4 +1,8 @@
-import React from "react"
+import React from "react";
+import '../styles/feed.css';
+import PostRecipe from "./postRecipe";
+import logo from "../logo.png";
+import { Router, Link } from "wouter";
 
 class ViewRecipe extends React.Component {
     constructor(props) {
@@ -29,11 +33,35 @@ class ViewRecipe extends React.Component {
 
     render() {
         return (
-            <div>
-                <img src={this.state.imagesrc} />
-                <h3 className="display-3">{this.state.recipename}</h3>
-                <p className="text-muted">{"by " + this.state.recipeuser}</p>
-                {this.state.recipesteps.split(',').map((value, index) => (<div><p id={"step" + index}>{index + ". " + value}</p></div>))}
+            <div className="text-center">
+                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                    <div className="container-fluid">
+                        <Link
+                            className="navbar-brand"
+                            href="/"
+                        >
+                            <img src={logo} className="img-fluid m-2" alt="logo" width="36"/>
+                            Potluck
+                        </Link>
+                        <div className="collapse navbar-collapse">
+                            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li className="nav-item pt-auto pb-auto pl-2">
+                                    <Link href="/about" className="nav-link active pt-auto pb-auto pl-2">About</Link>
+                                </li>
+                                <li className="nav-item pt-auto pb-auto pl-2">
+                                    <Link href="/feed" className="nav-link active pt-auto pb-auto pl-2">My Feed</Link>
+                                </li>
+                                <li className="nav-item pt-auto pb-auto pl-2">
+                                    <Link href="/addRecipe" className="nav-link active pt-auto pb-auto pl-2">New Recipe</Link>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <PostRecipe imagesrc={this.state.imagesrc} recipename={this.state.recipename} recipeuser={this.state.recipeuser}/>
+                <div>
+                    {this.state.recipesteps.split(',').map((value, index) => (<div><p id={"step" + index}>{index + ". " + value}</p></div>))}
+                </div>
             </div>
         );
     }
