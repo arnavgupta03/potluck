@@ -27,6 +27,7 @@ class Feed extends React.Component {
                 postsDone: postsDone
             })
         }).then(response => response.json()).then((data) => {
+            sessionStorage.setItem("currentRecipe", data.user + "_" + data.recipename);
             this.setState({
                 imagesrc: data.recipeimage,
                 recipename: data.recipename,
@@ -52,6 +53,7 @@ class Feed extends React.Component {
                 postsDone: newPostsDone
             })
         }).then(response => response.json()).then((data) => {
+            sessionStorage.setItem("currentRecipe", data.user + "_" + data.recipename);
             this.setState({
                 imagesrc: data.recipeimage,
                 recipename: data.recipename,
