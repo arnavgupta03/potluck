@@ -97,6 +97,9 @@ class Feed extends React.Component {
                                 <li className="nav-item pt-auto pb-auto pl-2">
                                     <Link href="/addRecipe" className="nav-link active pt-auto pb-auto pl-2">New Recipe</Link>
                                 </li>
+                                <li className="nav-item pt-auto pb-auto pl-2">
+                                    <Link href="/viewMyProfile" className="nav-link active pt-auto pb-auto pl-2">{sessionStorage.getItem("username")}</Link>
+                                </li>
                             </ul>
                         </div>
                     </div>
