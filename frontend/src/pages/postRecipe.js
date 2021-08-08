@@ -1,5 +1,6 @@
 import React from "react"
 import { Router, Link } from "wouter";
+import '../styles/feed.css';
 
 class PostRecipe extends React.Component {
     constructor(props) {
@@ -9,9 +10,9 @@ class PostRecipe extends React.Component {
     render() {
         return (
             <div>
-                <Link href="/viewRecipe"><img src={this.props.imagesrc} width='500' height='500'/>
-                <h3 className="display-3">{this.props.recipename}</h3></Link>
-                <Link href="/viewProfile"><small className="muted">{"by " + this.props.recipeuser}</small></Link>
+                <img src={this.props.imagesrc} width='500' height='500'/><br></br>
+                <Link href="/viewRecipe"><h3 className="display-3" className="postRecipeName">{this.props.recipename}</h3></Link>
+                <Link href="/viewUser" className="postRecipeUser"><small className="muted">{"by " + this.props.recipeuser}</small></Link>
             </div>
         );
     }
