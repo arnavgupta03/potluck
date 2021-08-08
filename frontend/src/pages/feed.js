@@ -1,7 +1,10 @@
 import React from "react"
 import '../styles/feed.css';
 import PostRecipe from "./postRecipe";
-import logo from "../logo.png"
+import logo from "../logo.png";
+import like from "../like.png";
+import save from "../save.png";
+import next from "../next.png";
 import { Router, Link } from "wouter";
 
 class Feed extends React.Component {
@@ -102,9 +105,9 @@ class Feed extends React.Component {
                     </div>
                 </nav>
                 <PostRecipe imagesrc={this.state.imagesrc} recipename={this.state.recipename} recipeuser={this.state.recipeuser}/>
-                <button onClick={() => this.handleLike()}>Like</button>
-                <button onClick={() => this.handleSave()}>Save</button>
-                <button onClick={() => this.handleNext()}>Next</button>
+                <button onClick={() => this.handleLike()}><img src={like} className="m-auto" width="50" height="50"></img></button>
+                <button onClick={() => this.handleSave()}><img src={save} className="m-auto" width="50" height="50"></img></button>
+                <button onClick={() => this.handleNext()}><img src={next} className="m-auto" width="50" height="50"></img></button>
             </div>
         );
     }
