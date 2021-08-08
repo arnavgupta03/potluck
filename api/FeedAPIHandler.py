@@ -34,9 +34,8 @@ class FeedAPIHandler(Resource):
                 for recipe in user['recipes']:
                     if not((user['username'] + '_' + recipe['name']) in lookedAtPosts):
                         currentRecipe = recipe
-
-        return {
-            "user": currentUser,
-            "recipename": currentRecipe['name'],
-            "recipeimage": currentRecipe['picture']
-        }
+                        return {
+                            "user": currentUser,
+                            "recipename": currentRecipe['name'],
+                            "recipeimage": currentRecipe['picture']
+                        }
