@@ -33,7 +33,7 @@ class ViewRecipe extends React.Component {
                 <img src={this.state.imagesrc} />
                 <h3 className="display-3">{this.state.recipename}</h3>
                 <p className="text-muted">{"by " + this.state.recipeuser}</p>
-                {this.state.recipesteps.split(',').map((value, index) => (<div><p id={"step" + index}>{value}</p></div>))}
+                {this.state.recipesteps.split(',').map((value, index) => (<div><p id={"step" + index}>{index + ". " + value}</p></div>))}
             </div>
         );
     }
