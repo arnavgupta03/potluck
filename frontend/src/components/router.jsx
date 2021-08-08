@@ -10,6 +10,7 @@ import AddRecipe from "../pages/addRecipe"
 import ViewRecipe from "../pages/viewRecipe";
 import ViewProfile from "../pages/viewProfile";
 import ViewMyProfile from "../pages/viewMyProfile";
+import MyBookmarks from "../pages/myBookmarks";
 
 /*
 The router is imported in app.jsx
@@ -30,6 +31,7 @@ export default () => (
       <Route path="/viewRecipe" component={ViewRecipe} />
       <Route path="/viewProfile" component={ViewProfile} />
       <Route path="/viewMyProfile" component={ViewMyProfile} />
+      <Route path="/myBookmarks" component={MyBookmarks} />
       <Route path="/about" component={About} />
     </Switch>
 );
