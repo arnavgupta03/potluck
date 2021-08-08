@@ -19,24 +19,30 @@ function ProfileSetup() {
         const loginRequest = xhr.send();
         alert(loginRequest);*/
 
-        fetch("http://localhost:5000/loginUser", {
-            method: "POST",
-            headers: {"Content-Type": "application/json"},
-            body: JSON.stringify({
-                username: username,
-                password: password
-            })
-        }).then(response => response.json()).then(function(data) {
-            if (data.message === "Success") {
-                sessionStorage.removeItem("password");
-                sessionStorage.setItem("loggedIn", "true");
-                sessionStorage.setItem("postsDone", "");
-                setLocation("/feed");
-            } else {
-                sessionStorage.setItem("loggedIn", "false");
-                setLocation("/")
-            }
-        });
+        if (!(sessionStorage.getItem("loggedIn") === "true")){
+            fetch("http://localhost:5000/loginUser", {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({
+                    username: username,
+                    password: password
+                })
+            }).then(response => response.json()).then(function(data) {
+                if (data.message == "Success") {
+                    alert("Login passed!")
+                    sessionStorage.removeItem("password");
+                    sessionStorage.setItem("loggedIn", "true");
+                    sessionStorage.setItem("postsDone", "");
+                    setLocation("/feed");
+                } else {
+                    sessionStorage.setItem("loggedIn", "false");
+                    alert("Login failed! Please try again.");
+                    setLocation("/");
+                }
+            });
+        } else {
+            setLocation("/feed");
+        }
     });
 
     return(
