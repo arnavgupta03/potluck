@@ -48,6 +48,7 @@ function Register() {
     const doTheRegister = () => {
         sessionStorage.setItem("username", document.getElementById("username").value);
         sessionStorage.setItem("password", document.getElementById("password").value);
+        sessionStorage.removeItem("loggedIn");
         setLocation("/setupProfile");
     }
 

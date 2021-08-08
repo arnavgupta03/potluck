@@ -40,6 +40,8 @@ function ProfileSetup() {
                     setLocation("/");
                 }
             });
+        } else {
+            setLocation("/feed");
         }
     });
 
