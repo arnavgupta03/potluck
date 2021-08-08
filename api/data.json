@@ -31,7 +31,8 @@
                         "Add condiments."
                     ]
                 }
-            ]
+            ],
+            "bookmarks": []
         },
         {
             "username": "bob",
@@ -88,7 +89,8 @@
                         "Let cool and serve."
                     ]
                 }
-            ]
+            ],
+            "bookmarks": []
         },
         {
             "username": "ramsay",
@@ -143,7 +145,8 @@
                         "Cover with powdered sugar."
                     ]
                 }
-            ]
+            ],
+            "bookmarks": []
         },
         {
             "username": "leung",
@@ -196,7 +199,8 @@
                         "Cut and serve."
                     ]
                 }
-            ]
+            ],
+            "bookmarks": []
         }
     ]
 }
