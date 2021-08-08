@@ -47,7 +47,7 @@ function Login() {
                             <input type="text" id="username" name="username" placeholder="Enter username" className="m-auto pl-3 form-control w-75" />
                         </div>
                         <div className="form-group text-center">
-                            <label for="password" className="mx-2 form-label w-75">Password</label><br />
+                            <label for="password" className="mx-2 form-label">Password</label><br />
                             <input type="password" name="password" id="password" placeholder="Enter password" className="m-auto pl-3 form-control w-75" />
                         </div>
                     </form>
